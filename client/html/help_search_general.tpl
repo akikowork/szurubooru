@@ -1,12 +1,11 @@
-<p>Search queries are built of tokens that are separated by spaces. Each token
-can be of following form:</p>
+<p>搜索查询是由用空格分隔的标记构建的。每个标签可以是以下形式:</p>
 
 <table>
     <thead>
         <tr>
-            <th>Syntax</th>
-            <th>Token type</th>
-            <th>Description</th>
+            <th>语法</th>
+            <th>标签类型</th>
+            <th>描述</th>
         </tr>
     </thead>
     <tbody>
@@ -33,36 +32,35 @@ can be of following form:</p>
     </tbody>
 </table>
 
-<p>Most of anonymous and named tokens support ranged and composite values that
-take following form:</p>
+<p>大多数匿名和命名标记都支持范围值和组合值，可采取以下形式:</p>
 
 <table>
     <tbody>
         <tr>
             <td><code>a,b,c</code></td>
-            <td>will show things that satisfy either <code>a</code>,
-            <code>b</code> or <code>c</code>.</td>
+            <td>会显示出满足 <code>a</code>,
+            <code>b</code> 或 <code>c</code>其中之一的内容.</td>
         </tr>
         <tr>
             <td><code>1..</code></td>
-            <td>will show things that are equal to or greater than 1.</td>
+            <td>会显示大于等于1的内容.</td>
         </tr>
         <tr>
             <td><code>..4</code></td>
-            <td>will show things that are equal to at most 4.</td>
+            <td>将显示最多等于4的内容.</td>
         </tr>
         <tr>
             <td><code>1..4</code></td>
-            <td>will show things that are equal to 1, 2, 3 or 4.</td>
+            <td>将显示等于 1, 2, 3 或 4 的内容.</td>
         </tr>
     </tbody>
 </table>
 
-<p>Ranged values can be also supplied by appending <code>-min</code> or
-<code>-max</code> to the key, for example like this:
+<p>范围值也可以通过附加 <code>-min</code> 或
+<code>-max</code> 来实现, 例如:
 <code>score-min:1</code>.</p>
 
-<p>Date/time values can be of following form:</p>
+<p>日期/时间值可以采用以下形式:</p>
 
 <ul>
     <li><code>today</code></li>
@@ -72,28 +70,25 @@ take following form:</p>
     <li><code>&lt;year&gt;-&lt;month&gt;-&lt;day&gt;</code></li>
 </ul>
 
-<p>Some fields, such as user names, can take wildcards (<code>*</code>).</p>
+<p>有些字段，比如用户名，可以使用通配符 (<code>*</code>).</p>
 
-<p>All tokens can be negated by prepending them with <code>-</code>.</p>
+<p>所有的标记都可以通过在它们前面加上前缀来否定 <code>-</code>.</p>
 
-<p>Sort style token values can be appended with <code>,asc</code> or
-<code>,desc</code> to control the sort direction, which can be also controlled
-by negating the whole token.</p>
+<p>排序样式标签值可以附加 <code>,asc</code> 或
+<code>,desc</code> 来控制排序方向，也可以通过否定整个标签控制排序方向.</p>
 
-<p>You can escape special characters such as <code>:</code> and <code>-</code>
-by prepending them with a backslash: <code>\\</code>.</p>
+<p>您可以转义特殊字符，比如 <code>:</code> 和 <code>-</code>
+通过在它们前面加上反斜杠: <code>\\</code>.</p>
 
-<h1>Example</h1>
+<h1>范例</h1>
 
-<p>Searching for posts with following query:</p>
+<p>以下列问题搜索图片:</p>
 
 <pre><code>sea -fav-count:8.. type:swf uploader:Pirate</code></pre>
 
-<p>will show flash files tagged as sea, that were liked by seven people at
-most, uploaded by user Pirate.</p>
+<p>将会显示被打上sea tag的flash文件,并且最多被7个用户'喜欢', 由用户Pirate上传.</p>
 
-<p>Searching for posts with <code>re:zero</code> will show an error message
-about unknown named token.</p>
+<p>以 <code>re:zero</code> 标记搜索将会显示错误</p>
 
-<p>Searching for posts with <code>re\:zero</code> will show posts tagged with
-<code>re:zero</code>.</p>
+<p>以 <code>re\:zero</code> 标记搜索将会显示tag为 
+<code>re:zero</code> 的图片.</p>

@@ -15,8 +15,8 @@
         <header>
             <nav class='edit tabs'>
                 <ul>
-                    <li class='edit'><a href>Write</a></li>
-                    <li class='preview'><a href>Preview</a></li>
+                    <li class='edit'><a href>撰写</a></li>
+                    <li class='preview'><a href>预览</a></li>
                 </ul>
             </nav>
 
@@ -26,7 +26,7 @@
                         %><a href='<%- ctx.formatClientLink('user', ctx.user.name) %>'><%
                     %><% } %><%
 
-                    %><%- ctx.user ? ctx.user.name : 'Deleted user' %><%
+                    %><%- ctx.user ? ctx.user.name : '已删除的用户' %><%
 
                     %><% if (ctx.user && ctx.user.name && ctx.canViewUsers) { %><%
                         %></a><%
@@ -45,13 +45,13 @@
                     %><span class='action-container'><%
                         %><% if (ctx.canEditComment) { %><%
                             %><a href class='edit'><%
-                                %><i class='fa fa-pencil'></i>&nbsp;edit<%
+                                %><i class='fa fa-pencil'></i>&nbsp;编辑<%
                             %></a><%
                         %><% } %><%
 
                         %><% if (ctx.canDeleteComment) { %><%
                             %><a href class='delete'><%
-                                %><i class='fa fa-remove'></i>&nbsp;delete<%
+                                %><i class='fa fa-remove'></i>&nbsp;删除<%
                             %></a><%
                         %><% } %><%
                     %></span><%
@@ -75,9 +75,9 @@
             <nav class='edit'>
                 <div class='messages'></div>
 
-                <input type='submit' class='save-changes' value='Save'/>
+                <input type='submit' class='save-changes' value='保存'/>
                 <% if (!ctx.onlyEditing) { %>
-                    <input type='button' class='cancel-editing discourage' value='Cancel'/>
+                    <input type='button' class='cancel-editing discourage' value='取消'/>
                 <% } %>
             </div>
         </form>

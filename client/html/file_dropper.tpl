@@ -1,13 +1,9 @@
 <div class='file-dropper-holder'>
     <input type='file' id='<%- ctx.id %>'/>
     <label class='file-dropper' for='<%- ctx.id %>' role='button'>
-        <% if (ctx.allowMultiple) { %>
-            Drop files here!
-        <% } else { %>
-            Drop file here!
-        <% } %>
+        将文件拖动到这里!
         <br/>
-        Or just click on this box.
+        或者 点击此处
         <% if (ctx.extraText) { %>
             <br/>
             <small><%= ctx.extraText %></small>
@@ -17,9 +13,9 @@
         <div class='url-holder'>
             <input type='text' name='url' placeholder='<%- ctx.urlPlaceholder %>'/>
             <% if (ctx.lock) { %>
-                <button>Confirm</button>
+                <button>确认</button>
             <% } else { %>
-                <button>Add URL</button>
+                <button>添加URL地址</button>
             <% } %>
         </div>
     <% } %>

@@ -24,10 +24,10 @@
                 type: ctx.post.mimeType,
                 src: ctx.post.contentUrl,
             }),
-            'Your browser doesn\'t support HTML5 videos.')
+            '你的浏览器不支持播放 HTML5 视频。')
         %>
 
-    <% } else { console.log(new Error('Unknown post type')); } %>
+    <% } else { console.log(new Error('未知稿件类型。')); } %>
 
     <div class='post-overlay resize-listener'>
     </div>

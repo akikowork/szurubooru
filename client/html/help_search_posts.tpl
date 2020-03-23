@@ -1,74 +1,74 @@
-<p><strong>Anonymous tokens</strong></p>
+<p><strong>匿名令牌</strong></p>
 
-<p>Same as <code>tag</code> token.</p>
+<p>与 <code>tag</code> 令牌相同.</p>
 
-<p><strong>Named tokens</strong></p>
+<p><strong>命名令牌</strong></p>
 
 <table>
     <tbody>
         <tr>
             <td><code>id</code></td>
-            <td>having given post number</td>
+            <td>搜索给定图片id</td>
         </tr>
         <tr>
             <td><code>tag</code></td>
-            <td>having given tag (accepts wildcards)</td>
+            <td>给定Tags(接受通配符)</td>
         </tr>
         <tr>
             <td><code>score</code></td>
-            <td>having given score</td>
+            <td>给定分数</td>
         </tr>
         <tr>
             <td><code>uploader</code></td>
-            <td>uploaded by given use (accepts wildcards)r</td>
+            <td>由指定用户上传(接受通配符)</td>
         </tr>
         <tr>
             <td><code>upload</code></td>
-            <td>alias of <code>upload</code></td>
+            <td>与 <code>uploader</code>相同</td>
         </tr>
         <tr>
             <td><code>submit</code></td>
-            <td>alias of <code>upload</code></td>
+            <td>与 <code>uploader</code>相同</td>
         </tr>
         <tr>
             <td><code>comment</code></td>
-            <td>commented by given user (accepts wildcards)</td>
+            <td>由指定用户注释(接受通配符)</td>
         </tr>
         <tr>
             <td><code>fav</code></td>
-            <td>favorited by given user (accepts wildcards)</td>
+            <td>被指定用户收藏(接受通配符)</td>
         </tr>
         <tr>
             <td><code>source</code></td>
-            <td>having given source URL (accepts wildcards)</td>
+            <td>给定源URL(接受通配符)</td>
         </tr>
         <tr>
             <td><code>tag-count</code></td>
-            <td>having given number of tags</td>
+            <td>给出标签数量</td>
         </tr>
         <tr>
             <td><code>comment-count</code></td>
-            <td>having given number of comments</td>
+            <td>给出评论数量</td>
         </tr>
         <tr>
             <td><code>fav-count</code></td>
-            <td>favorited by given number of users</td>
+            <td>给出收藏数量</td>
         </tr>
         <tr>
             <td><code>note-count</code></td>
-            <td>having given number of annotations</td>
+            <td>给出注释数量</td>
         </tr>
         <tr>
             <td><code>note-text</code></td>
-            <td>having given note text (accepts wildcards)</td>
+            <td>给出了注释（note）文本(接受通配符)</td>
         </tr>
         <tr>
             <td><code>relation-count</code></td>
-            <td>having given number of relations</td>
+            <td>给出关系数量</td>
         </tr>
         <tr>
             <td><code>feature-count</code></td>
-            <td>having been featured given number of times</td>
+            <td>给出被标记的数量</td>
         </tr>
         <tr>
             <td><code>type</code></td>

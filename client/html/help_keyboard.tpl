@@ -1,47 +1,43 @@
-<p>You can use your keyboard to navigate around the site. There are a few
-shortcuts:</p>
+<p>你可以用键盘来浏览网站。以下是一些快捷键:</p>
 
 <table>
     <thead>
         <tr>
-            <th>Hotkey</th>
-            <th>Description</th>
+            <th>热键</th>
+            <th>描述</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td><kbd>Q</kbd></td>
-            <td>Focus search field, if available</td>
+            <td>将光标定位到搜索区域</td>
         </tr>
 
         <tr>
-            <td><kbd>A</kbd> and <kbd>D</kbd>, <kbd>←</kbd> and <kbd>→</kbd></td>
-            <td>Go to newer/older page or post</td>
+            <td><kbd>A</kbd> 和 <kbd>D</kbd>, <kbd>←</kbd> 和 <kbd>→</kbd></td>
+            <td>转到前一张/后一张页面或图片</td>
         </tr>
 
         <tr>
             <td><kbd>F</kbd></td>
-            <td>Cycle post fit mode</td>
+            <td>循环后贴合模式</td>
         </tr>
 
         <tr>
             <td><kbd>E</kbd></td>
-            <td>Edit post</td>
+            <td>编辑图片</td>
         </tr>
 
         <tr>
             <td><kbd>P</kbd></td>
-            <td>Focus first post in post list</td>
+            <td>将光标定位到列表中的第一张图片</td>
         </tr>
 
         <tr>
             <td><kbd>Delete</kbd></td>
-            <td>Delete post (while in edit mode)</td>
+            <td>在编辑模式下删除照片</td>
         </tr>
     </tbody>
 </table>
-
-<p>Additionally, each item in the top navigation can be accessed using a
-feature called &ldquo;access keys&rdquo;. Pressing the underlined letter while
-holding Shift or Alt+Shift (depending on your browser) will go to the desired
-page (most browsers) or focus the link (IE).</p>
+<p>此外，顶部导航中的每项都可以使用快捷键&。
+按住Shift键或Alt+Shift键的同时按下带下划线的字母就可以进入你想进入的页面。</p>

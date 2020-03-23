@@ -5,10 +5,10 @@
     </header>
     <% if (ctx.canListPosts) { %>
         <form class='horizontal'>
-            <%= ctx.makeTextInput({name: 'search-text', placeholder: 'enter some tags'}) %>
-            <input type='submit' value='Search'/>
-            <span class=sep>or</span>
-            <a href='<%- ctx.formatClientLink('posts') %>'>browse all posts</a>
+            <%= ctx.makeTextInput({name: 'search-text', placeholder: '搜索 Tag'}) %>
+            <input type='submit' value='搜索'/>
+            <span class=sep>或</span>
+            <a href='<%- ctx.formatClientLink('posts') %>'>浏览所有图片</a>
         </form>
     <% } %>
     <div class='post-info-container'></div>

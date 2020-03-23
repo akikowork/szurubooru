@@ -5,26 +5,24 @@
             <ul class='input'>
                 <li>
                     <%= ctx.makeTextInput({
-                        text: 'User name or e-mail address',
+                        text: '用户名或邮箱',
                         name: 'user-name',
                         required: true,
                     }) %>
                 </li>
             </ul>
 
-            <p><small>Proceeding will send an e-mail that contains a password reset
-            link. Clicking it is going to generate a new password for your account.
-            It is recommended to change that password to something else.</small></p>
+            <p><small>点击确定按钮将会向您预先设定的邮箱发送一封带有重置密码的链接的邮件。点击链接将会为您的账户重置一个随机密码，建议您之后及时更改密码。</small></p>
 
             <div class='messages'></div>
             <div class='buttons'>
-                <input type='submit' value='Proceed'/>
+                <input type='submit' value='确定'/>
             </div>
         </form>
     <% } else { %>
-        <p>We do not support automatic password resetting.</p>
+        <p>我们暂不支持自动重置密码服务。</p>
         <% if (ctx.contactEmail) { %>
-            <p>Please send an e-mail to <a href='mailto:<%- ctx.contactEmail %>'><%- ctx.contactEmail %></a> to go through a manual procedure.</p>
+            <p>请向 <a href='mailto:<%- ctx.contactEmail %>'><%- ctx.contactEmail %></a> 发送邮件帮助您重置密码。</p>
         <% } %>
     <% } %>
 </div>

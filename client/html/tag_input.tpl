@@ -1,7 +1,7 @@
 <div class='tag-input'>
     <div class='main-control'>
-        <input type='text' placeholder='type to add…'/>
-        <button>Add</button>
+        <input type='text' placeholder='输入一个标签…'/>
+        <button>添加</button>
     </div>
 
     <div class='tag-suggestions'>
@@ -11,7 +11,7 @@
                     <a href class='opacity'><i class='fa fa-eye'></i></a>
                     <a href class='close'>×</a>
                 </span>
-                Suggested tags
+                建议的 Tag
             </p>
             <ul></ul>
         </div>

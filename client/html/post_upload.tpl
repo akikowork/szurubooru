@@ -3,17 +3,17 @@
         <div class='dropper-container'></div>
 
         <div class='control-strip'>
-            <input type='submit' value='Upload all' class='submit'/>
+            <input type='submit' value='上传全部' class='submit'/>
 
             <span class='skip-duplicates'>
                 <%= ctx.makeCheckbox({
-                    text: 'Skip duplicates',
+                    text: '跳过重复项',
                     name: 'skip-duplicates',
                     checked: false,
                 }) %>
             </span>
 
-            <input type='button' value='Cancel' class='cancel'/>
+            <input type='button' value='取消' class='cancel'/>
         </div>
 
         <div class='messages'></div>

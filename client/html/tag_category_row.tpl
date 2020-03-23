@@ -29,15 +29,15 @@
     <% if (ctx.canDelete) { %>
         <td class='remove'>
             <% if (ctx.tagCategory.tagCount) { %>
-                <a class='inactive' title="Can't delete category in use">Remove</a>
+                <a class='inactive' title="不能删除正在使用的分类">移除</a>
             <% } else { %>
-                <a href>Remove</a>
+                <a href>移除</a>
             <% } %>
         </td>
     <% } %>
     <% if (ctx.canSetDefault) { %>
         <td class='set-default'>
-            <a href>Make default</a>
+            <a href>保留默认值</a>
         </td>
     <% } %>
 </tr>

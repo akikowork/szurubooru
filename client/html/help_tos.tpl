@@ -1,51 +1,37 @@
-<p>By accessing <%- ctx.name %> (&ldquo;Site&rdquo;) you agree to the following
-Terms of Service. If you do not agree to these terms, then please do not access
-the Site.</p>
+<p>您在访问 <%- ctx.name %> (&ldquo;网站&rdquo;)时，需要同意以下
+服务条款。如果您不同意以下条款，请不要继续浏览本站。</p>
 
 <ul>
-    <li>The Site is presented to you AS IS, without any warranty, express or
-    implied. You will not hold the Site or its staff members liable for damages
-    caused by the use of the site.</li>
-    <li>The Site reserves the right to delete or modify your account, or any
-    content you have posted to the site.</li>
-    <li>The Site reserves the right to change these Terms of Service without
-    prior notice.</li>
+    <li>本网站是按原样呈现给您的，没有任何明示或暗示的保证。
+	本网站或其工作人员对使用本网站所造成的损害不承担负责.</li>
+    <li>本网站保留删除或修改您的帐户和任何您发布到本网站内容的权利。</li>
+    <li>本网站保留更改服务条款的权利，恕不另行通知。</li>
     <li>If you are a minor, then you will not use the Site.</li>
-    <li>You are using the Site only for personal use.</li>
-    <li>You will not spam, troll or offend anyone.</li>
-    <li>You accept that the Site is not liable for any content that you may
-    stumble upon.</li>
+    <li>您保证只将本网站作私人用途。</li>
+    <li>您保证不会发送垃圾邮件，刷屏或冒犯任何人。</li>
+    <li>您接受本网站对您可能无意中发现的任何内容不承担任何责任。</li>
 </ul>
 
-<p class='section' id='section-prohibited-content'><strong>Prohibited content</strong></p>
+<p class='section' id='section-prohibited-content'><strong>禁止内容</strong></p>
 
 <ul>
-    <li>Child pornography: any photograph or photorealistic drawing or movie
-    that depicts children in a sexual manner. This includes nudity, explicit
-    sex, implied sex, or sexually persuasive positions.</li>
+    <li>儿童色情作品:以色情方式描绘儿童的任何照片或写实绘画或电影。
+	这包括裸体，露骨的性行为，含蓄的性行为，或隐晦的性姿势。</li>
 
-    <li>Bestiality: any photograph or photorealistic drawing or movie that
-    depicts humans having sex (either explicit or implied) with other non-human
-    animals.</li>
+    <li>兽交:任何描述人类与其他非人类动物发生性行为的照片或写实绘画或电影。</li>
 
-    <li>Any depiction of extreme mutilation, extreme bodily distension,
-    feces.</li>
+    <li>任何极端残缺不全的描述，极端的身体膨胀，粪便。</li>
 
-    <li>Personal images: any image that is suspected to be uploaded for
-    personal use. This includes, but is not limited to, avatars and forum
-    signatures.</li>
+    <li>个人图片:任何被怀疑是上传用于个人用途的图片。这包括但不限于头像和论坛签名。</li>
 </ul>
 
-<p class='section' id='section-privacy-policy'><strong>Privacy policy</strong></p>
+<p class='section' id='section-privacy-policy'><strong>隐私策略</strong></p>
 
-<p>The Site will not disclose the IP address or email address of any user
-except to the staff.</p>
+<p>除开发组外，本网站不会透露任何用户的IP地址或电子邮件地址。</p>
 
-<p>Posts, comments, favorites, ratings and other actions linked to your account
-will be stored in the Site&rsquo;s database. The &ldquo;Upload
-anonymously&rdquo; option allows you to post content without linking it to your
-account&nbsp;&ndash; meaning your nickname will not be stored in the database
-nor shown in the &ldquo;Uploader&rdquo; field.</p>
+<p>贴子、评论、收藏夹、评级和其他与你的账户相关的操作都将存储在网站的数据库中。
+匿名上传选项允许你发布内容而不需要链接到你的
+帐户意味着您的昵称将不会存储在数据库中，
+也不会显示在上传者字段中。</p>
 
-<p>Cookies are used to store your session data in order to keep you logged in
-and personalize your web experience.</p>
+<p>Cookies用于存储您的会话数据，以保持您的登录和个性化您的web体验。</p>

@@ -1,12 +1,12 @@
 <div class='tag-delete'>
     <form>
-        <p>This tag has <a href='<%- ctx.formatClientLink('posts', {query: ctx.escapeColons(ctx.tag.names[0])}) %>'><%- ctx.tag.postCount %> usage(s)</a>.</p>
+        <p>这个 Tag 被使用过 <a href='<%- ctx.formatClientLink('posts', {query: ctx.escapeColons(ctx.tag.names[0])}) %>'><%- ctx.tag.postCount %> 次</a>。</p>
 
         <ul class='input'>
             <li>
                 <%= ctx.makeCheckbox({
-                    name: 'confirm-deletion',
-                    text: 'I confirm that I want to delete this tag.',
+                    name: '确认删除',
+                    text: '我确定要删除这个 Tag。',
                     required: true,
                 }) %>
             </li>
@@ -15,7 +15,7 @@
         <div class='messages'></div>
 
         <div class='buttons'>
-            <input type='submit' value='Delete tag'/>
+            <input type='submit' value='删除 Tag'/>
         </div>
     </form>
 </div>

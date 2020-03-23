@@ -7,7 +7,7 @@
             <% if (ctx.canEditName) { %>
                 <li>
                     <%= ctx.makeTextInput({
-                        text: 'User name',
+                        text: '用户名',
                         name: 'name',
                         value: ctx.user.name,
                         pattern: ctx.userNamePattern,
@@ -18,9 +18,9 @@
             <% if (ctx.canEditPassword) { %>
                 <li>
                     <%= ctx.makePasswordInput({
-                        text: 'Password',
+                        text: '密码',
                         name: 'password',
-                        placeholder: 'leave blank if not changing',
+                        placeholder: '不做更改请留空',
                         pattern: ctx.passwordPattern,
                     }) %>
                 </li>
@@ -29,7 +29,7 @@
             <% if (ctx.canEditEmail) { %>
                 <li>
                     <%= ctx.makeEmailInput({
-                        text: 'Email',
+                        text: '邮箱',
                         name: 'email',
                         value: ctx.user.email,
                     }) %>
@@ -39,7 +39,7 @@
             <% if (ctx.canEditRank) { %>
                 <li>
                     <%= ctx.makeSelect({
-                        text: 'Rank',
+                        text: '用户组',
                         name: 'rank',
                         keyValues: ctx.ranks,
                         selectedKey: ctx.user.rank,
@@ -49,7 +49,7 @@
 
             <% if (ctx.canEditAvatar) { %>
                 <li class='avatar'>
-                    <label>Avatar</label>
+                    <label>头像</label>
                     <div id='avatar-content'></div>
                     <div id='avatar-radio'>
                         <%= ctx.makeRadio({
@@ -60,7 +60,7 @@
                         }) %>
 
                         <%= ctx.makeRadio({
-                            text: 'Manual avatar',
+                            text: '自定义头像',
                             name: 'avatar-style',
                             value: 'manual',
                             selectedValue: ctx.user.avatarStyle,
@@ -73,7 +73,7 @@
         <div class='messages'></div>
 
         <div class='buttons'>
-            <input type='submit' value='Save settings'/>
+            <input type='submit' value='保存'/>
         </div>
     </form>
 </div>

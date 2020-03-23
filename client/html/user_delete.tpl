@@ -4,7 +4,7 @@
             <li>
                 <%= ctx.makeCheckbox({
                     name: 'confirm-deletion',
-                    text: 'I confirm that I want to delete this account.',
+                    text: '我确认我希望删除本账户。',
                     required: true,
                 }) %>
             </li>
@@ -12,7 +12,7 @@
 
         <div class='messages'></div>
         <div class='buttons'>
-            <input type='submit' value='Delete account'/>
+            <input type='submit' value='!!删除账户!!'/>
         </div>
     </form>
 </div>

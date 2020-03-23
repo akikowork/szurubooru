@@ -12,7 +12,7 @@
                     <a rel='prev' class='inactive'>
                 <% } %>
                     <i class='fa fa-chevron-left'></i>
-                    <span class='vim-nav-hint'>&lt; Previous post</span>
+                    <span class='vim-nav-hint'>&lt; 上一张图</span>
                 </a>
             </article>
             <article class='next-post'>
@@ -26,7 +26,7 @@
                     <a rel='next' class='inactive'>
                 <% } %>
                     <i class='fa fa-chevron-right'></i>
-                    <span class='vim-nav-hint'>Next post &gt;</span>
+                    <span class='vim-nav-hint'>下一张图 &gt;</span>
                 </a>
             </article>
             <article class='edit-post'>
@@ -42,7 +42,7 @@
                         <a class='inactive'>
                     <% } %>
                         <i class='fa fa-pencil'></i>
-                        <span class='vim-nav-hint'>Edit post</span>
+                        <span class='vim-nav-hint'>编辑图片信息</span>
                     </a>
                 <% } %>
             </article>
@@ -59,7 +59,7 @@
         <% } %>
 
         <% if (ctx.canCreateComments) { %>
-            <h2>Add comment</h2>
+            <h2>为图片评论</h2>
             <div class='comment-form-container'></div>
         <% } %>
     </div>

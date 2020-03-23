@@ -2,23 +2,23 @@
     <form>
         <ul class='input'>
             <li class='target'>
-                <%= ctx.makeTextInput({name: 'target-tag', required: true, text: 'Target tag', pattern: ctx.tagNamePattern}) %>
+                <%= ctx.makeTextInput({name: 'target-tag', required: true, text: '目标 tag', pattern: ctx.tagNamePattern}) %>
             </li>
 
             <li>
-                <p>Usages in posts, suggestions and implications will be
-                merged. Category needs to be handled manually.</p>
+                <p>各 Tag 在投稿、建议和注释中的使用次数将会被合并。
+				但分类需要另行调整。</p>
 
-                <%= ctx.makeCheckbox({name: 'alias', text: 'Make this tag an alias of the target tag.'}) %>
+                <%= ctx.makeCheckbox({name: 'alias', text: '让这个 Tag 成为目标 Tag 的一个别名。'}) %>
 
-                <%= ctx.makeCheckbox({required: true, text: 'I confirm that I want to merge this tag.'}) %>
+                <%= ctx.makeCheckbox({required: true, text: '我确认我想要合并这个 Tag。'}) %>
             </li>
         </ul>
 
         <div class='messages'></div>
 
         <div class='buttons'>
-            <input type='submit' value='Merge tag'/>
+            <input type='submit' value='合并 Tag'/>
         </div>
     </form>
 </div>

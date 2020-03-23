@@ -34,15 +34,15 @@
         <% } %>
 
         <section class='zoom'>
-            <a href class='fit-original'>Original zoom</a> &middot;
-            <a href class='fit-width'>fit width</a> &middot;
-            <a href class='fit-height'>height</a> &middot;
-            <a href class='fit-both'>both</a>
+            <a href class='fit-original'>原始大小</a> &middot;
+            <a href class='fit-width'>适应宽度</a> &middot;
+            <a href class='fit-height'>适应高度</a> &middot;
+            <a href class='fit-both'>适应宽高比</a>
         </section>
 
         <% if (ctx.post.source) { %>
             <section class='source'>
-                Source: <% for (let i = 0; i < ctx.post.sourceSplit.length; i++) { %>
+                来源：<% for (let i = 0; i < ctx.post.sourceSplit.length; i++) { %>
                     <% if (i != 0) { %>&middot;<% } %>
                     <a href='<%- ctx.post.sourceSplit[i] %>' title='<%- ctx.post.sourceSplit[i] %>'><%- ctx.extractRootDomain(ctx.post.sourceSplit[i]) %></a>
                 <% } %>
@@ -50,9 +50,9 @@
         <% } %>
 
         <section class='search'>
-            Search on
+            在识图网站上搜索
             <a href='http://iqdb.org/?url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>IQDB</a> &middot;
-            <a href='https://www.google.com/searchbyimage?&image_url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>Google Images</a>
+            <a href='https://www.google.com/searchbyimage?&image_url=<%- encodeURIComponent(ctx.post.fullContentUrl) %>'>Google 图像搜索</a>
         </section>
 
         <section class='social'>
@@ -64,7 +64,7 @@
 
     <% if (ctx.post.relations.length) { %>
         <nav class='relations'>
-            <h1>Relations (<%- ctx.post.relations.length %>)</h1>
+            <h1>关联 (<%- ctx.post.relations.length %>)</h1>
             <ul><!--
                 --><% for (let post of ctx.post.relations) { %><!--
                     --><li><!--
@@ -103,9 +103,9 @@
             --></ul>
         <% } else { %>
             <p>
-                No tags yet!
+                还没有添加 Tag！
                 <% if (ctx.canEditPosts) { %>
-                    <a href='<%= ctx.getPostEditUrl(ctx.post.id, ctx.parameters) %>'>Add some.</a>
+                    <a href='<%= ctx.getPostEditUrl(ctx.post.id, ctx.parameters) %>'>添加一些 Tag。</a>
                 <% } %>
             </p>
         <% } %>

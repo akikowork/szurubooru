@@ -58,7 +58,7 @@
                 <% if (ctx.canUploadAnonymously) { %>
                     <div class='anonymous'>
                         <%= ctx.makeCheckbox({
-                            text: 'Upload anonymously',
+                            text: '匿名上传',
                             name: 'anonymous',
                             checked: ctx.uploadable.anonymous,
                         }) %>
@@ -68,7 +68,7 @@
                 <% if (['video'].includes(ctx.uploadable.type)) { %>
                     <div class='loop-video'>
                         <%= ctx.makeCheckbox({
-                            text: 'Loop video',
+                            text: '视频循环',
                             name: 'loop-video',
                             checked: ctx.uploadable.flags.includes('loop'),
                         }) %>
@@ -87,14 +87,14 @@
                                 <%= ctx.makeThumbnail(lookalike.post.thumbnailUrl) %>
                             </a>
                             <div class='description'>
-                                Similar post: <%= ctx.makePostLink(lookalike.post.id, true) %>
+                                相似的投稿：<%= ctx.makePostLink(lookalike.post.id, true) %>
                                 <br/>
                                 <%- Math.round((1-lookalike.distance) * 100) %>% match
                             </div>
                             <div class='controls'>
-                                <%= ctx.makeCheckbox({text: 'Copy tags', name: 'copy-tags'}) %>
+                                <%= ctx.makeCheckbox({text: '复制 Tag', name: 'copy-tags'}) %>
                                 <br/>
-                                <%= ctx.makeCheckbox({text: 'Add relation', name: 'add-relation'}) %>
+                                <%= ctx.makeCheckbox({text: '添加关联', name: 'add-relation'}) %>
                             </div>
                         </li>
                     <% } %>
