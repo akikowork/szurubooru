@@ -57,7 +57,7 @@ api.fetchConfig().then(() => {
         controller(router);
     }
 }, error => {
-    window.alert('Could not fetch basic configuration from server');
+    window.alert('服务器暂时抽风了，稍等一下吧');
 }).then(() => {
     api.loginFromCookies().then(() => {
             tags.refreshCategoryColorMap();
@@ -69,7 +69,7 @@ api.fetchConfig().then(() => {
             } else {
                 const ctx = router.start('/');
                 ctx.controller.showError(
-                    'An error happened while trying to log you in: ' +
+                    '对不起，在您登录时发生了错误: ' +
                         error.message);
             }
         });

@@ -117,7 +117,7 @@ class Api extends events.EventTarget {
             }
         }
         if (minViableRank === null) {
-            throw `Bad privilege name: ${lookup}`;
+            throw `无效的权限名: ${lookup}`;
         }
         let myRank = this.user !== null ?
             this.allRanks.indexOf(this.user.rank) :
@@ -160,7 +160,7 @@ class Api extends events.EventTarget {
     createToken(userName, options) {
         let userTokenRequest = {
             enabled: true,
-            note: 'Web Login Token'
+            note: '网页登录令牌'
         };
         if (typeof options.expires !== 'undefined') {
             userTokenRequest.expirationTime = new Date().addDays(options.expires).toISOString()
@@ -314,8 +314,8 @@ class Api extends events.EventTarget {
                         fileTokens[fileId] = null;
                     }
                     error.message =
-                        'The uploaded file has expired; ' +
-                        'please resend the form to reupload.';
+                        '上传的文件已失效; ' +
+                        '请重试.';
                 }
                 return Promise.reject(error);
             });
@@ -389,7 +389,7 @@ class Api extends events.EventTarget {
                 }
             } catch (e) {
                 reject(
-                    new Error('Authentication error (malformed credentials)'));
+                    new Error('身份验证错误(格式错误的凭据)'));
             }
 
             if (!options.noProgress) {
@@ -400,7 +400,7 @@ class Api extends events.EventTarget {
                 req.abort();  // does *NOT* call the callback passed in .end()
                 progress.done();
                 reject(
-                    new Error('The request was aborted due to user cancel.'));
+                    new Error('由于用户取消，请求被中止.'));
             };
 
             req.end((error, response) => {
@@ -409,7 +409,7 @@ class Api extends events.EventTarget {
                 if (error) {
                     if (response && response.body) {
                         error = new Error(
-                            response.body.description || 'Unknown error');
+                            response.body.description || '未知错误');
                         error.response = response.body;
                     }
                     reject(error);
