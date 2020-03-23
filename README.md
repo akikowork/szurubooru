@@ -1,3 +1,7 @@
+#汉化过的szurubooru，您可以轻松搭建一个功能强大的中文图库。
+
+以下是原文README
+
 # szurubooru
 
 Szurubooru is an image board engine inspired by services such as Danbooru,
