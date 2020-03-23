@@ -206,7 +206,7 @@ class PostEditSidebarControl extends events.EventTarget {
 
     _evtFeatureClick(e) {
         e.preventDefault();
-        if (confirm('Are you sure you want to feature this post?')) {
+        if (confirm('您确定要标记这张图片?')) {
             this.dispatchEvent(new CustomEvent('feature', {
                 detail: {
                     post: this._post,
@@ -226,7 +226,7 @@ class PostEditSidebarControl extends events.EventTarget {
 
     _evtDeleteClick(e) {
         e.preventDefault();
-        if (confirm('Are you sure you want to delete this post?')) {
+        if (confirm('您确定要删除这张图片?')) {
             this.dispatchEvent(new CustomEvent('delete', {
                 detail: {
                     post: this._post,
@@ -288,14 +288,14 @@ class PostEditSidebarControl extends events.EventTarget {
         textarea.blur();
         document.body.removeChild(textarea);
         alert(success
-            ? 'Notes copied to clipboard.'
-            : 'Failed to copy the text to clipboard. Sorry.');
+            ? '已复制到剪贴板.'
+            : '无法复制到剪贴板.');
     }
 
     _evtPasteNotesClick(e) {
         e.preventDefault();
         const text = window.prompt(
-            'Please enter the exported notes snapshot:');
+            '请输入要导出的notes快照:');
         if (!text) {
             return;
         }

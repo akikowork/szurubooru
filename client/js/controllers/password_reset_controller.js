@@ -9,7 +9,7 @@ const PasswordResetView = require('../views/password_reset_view.js');
 class PasswordResetController {
     constructor() {
         topNavigation.activate('login');
-        topNavigation.setTitle('Password reminder');
+        topNavigation.setTitle('找回密码');
 
         this._passwordResetView = new PasswordResetView();
         this._passwordResetView.addEventListener(
@@ -24,8 +24,8 @@ class PasswordResetController {
         api.get(uri.formatApiLink('password-reset', e.detail.userNameOrEmail))
             .then(() => {
                 this._passwordResetView.showSuccess(
-                    'E-mail has been sent. To finish the procedure, ' +
-                    'please click the link it contains.');
+                    '一封带有恢复密码链接的邮件已发送到您的注册邮箱中, ' +
+                    '请检查(很有可能被当成垃圾邮件).');
             }, error => {
                 this._passwordResetView.showError(error.message);
                 this._passwordResetView.enableForm();
@@ -44,7 +44,7 @@ class PasswordResetFinishController {
                 return api.login(name, password, false);
             }).then(() => {
                 const ctx = router.show(uri.formatClientLink());
-                ctx.controller.showSuccess('New password: ' + password);
+                ctx.controller.showSuccess('新密码: ' + password);
             }, error => {
                 const ctx = router.show(uri.formatClientLink());
                 ctx.controller.showError(error.message);

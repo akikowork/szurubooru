@@ -102,7 +102,7 @@ class PostMainController extends BasePostController {
         this._view.sidebarControl.clearMessages();
         e.detail.post.feature()
             .then(() => {
-                this._view.sidebarControl.showSuccess('Post featured.');
+                this._view.sidebarControl.showSuccess('图片已标记.');
                 this._view.sidebarControl.enableForm();
             }, error => {
                 this._view.sidebarControl.showError(error.message);
@@ -121,7 +121,7 @@ class PostMainController extends BasePostController {
             .then(() => {
                 misc.disableExitConfirmation();
                 const ctx = router.show(uri.formatClientLink('posts'));
-                ctx.controller.showSuccess('Post deleted.');
+                ctx.controller.showSuccess('图片已删除.');
             }, error => {
                 this._view.sidebarControl.showError(error.message);
                 this._view.sidebarControl.enableForm();
@@ -152,7 +152,7 @@ class PostMainController extends BasePostController {
         }
         post.save()
             .then(() => {
-                this._view.sidebarControl.showSuccess('Post saved.');
+                this._view.sidebarControl.showSuccess('图片已保存.');
                 this._view.sidebarControl.enableForm();
                 misc.disableExitConfirmation();
             }, error => {

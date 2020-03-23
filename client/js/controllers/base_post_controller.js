@@ -8,12 +8,12 @@ class BasePostController {
     constructor(ctx) {
         if (!api.hasPrivilege('posts:view')) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to view posts.');
+            this._view.showError('您无权查看这张图片.');
             return;
         }
 
         topNavigation.activate('posts');
-        topNavigation.setTitle('Post #' + ctx.parameters.id.toString());
+        topNavigation.setTitle('图片 #' + ctx.parameters.id.toString());
     }
 }
 

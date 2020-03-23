@@ -11,7 +11,7 @@ class LoginController {
     constructor() {
         api.forget();
         topNavigation.activate('login');
-        topNavigation.setTitle('Login');
+        topNavigation.setTitle('登录');
 
         this._loginView = new LoginView();
         this._loginView.addEventListener('submit', e => this._evtLogin(e));
@@ -24,7 +24,7 @@ class LoginController {
         api.login(e.detail.name, e.detail.password, e.detail.remember)
             .then(() => {
                 const ctx = router.show(uri.formatClientLink());
-                ctx.controller.showSuccess('Logged in');
+                ctx.controller.showSuccess('登录成功');
                 // reload tag category color map, this is required when `tag_categories:list` has a permission other than anonymous
                 tags.refreshCategoryColorMap();
             }, error => {
@@ -39,7 +39,7 @@ class LogoutController {
         api.forget();
         api.logout();
         const ctx = router.show(uri.formatClientLink());
-        ctx.controller.showSuccess('Logged out');
+        ctx.controller.showSuccess('已登出');
     }
 }
 

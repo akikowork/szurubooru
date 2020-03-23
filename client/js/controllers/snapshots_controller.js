@@ -12,12 +12,12 @@ class SnapshotsController {
     constructor(ctx) {
         if (!api.hasPrivilege('snapshots:list')) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to view history.');
+            this._view.showError('您没有查看记录的权限.');
             return;
         }
 
         topNavigation.activate('');
-        topNavigation.setTitle('History');
+        topNavigation.setTitle('历史记录');
 
         this._pageController = new PageController();
         this._pageController.run({

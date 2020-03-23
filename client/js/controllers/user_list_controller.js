@@ -14,12 +14,12 @@ class UserListController {
     constructor(ctx) {
         if (!api.hasPrivilege('users:list')) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to view users.');
+            this._view.showError('您没有查看用户的权限.');
             return;
         }
 
         topNavigation.activate('users');
-        topNavigation.setTitle('Listing users');
+        topNavigation.setTitle('用户列表');
 
         this._ctx = ctx;
         this._pageController = new PageController();

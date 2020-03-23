@@ -19,7 +19,7 @@ class FileDropperControl extends events.EventTarget {
             lock: options.lock,
             id: 'file-' + Math.random().toString(36).substring(7),
             urlPlaceholder:
-                options.urlPlaceholder || 'Alternatively, paste an URL here.',
+                options.urlPlaceholder || '或者在此粘贴URL网址.',
         });
 
         this._dropperNode = source.querySelector('.file-dropper');
@@ -80,7 +80,7 @@ class FileDropperControl extends events.EventTarget {
                 return;
             }
             if (!url.match(/^https?:\/\/[^.]+\..+$/)) {
-                window.alert(`"${url}" does not look like a valid URL.`);
+                window.alert(`"${url}" 不是一个合法的网址.`);
                 return;
             }
         }
@@ -111,10 +111,10 @@ class FileDropperControl extends events.EventTarget {
         e.preventDefault();
         this._dropperNode.classList.remove('active');
         if (!e.dataTransfer.files.length) {
-            window.alert('Only files are supported.');
+            window.alert('只支持文件.');
         }
         if (!this._options.allowMultiple && e.dataTransfer.files.length > 1) {
-            window.alert('Cannot select multiple files.');
+            window.alert('无法多选.');
         }
         this._emitFiles(e.dataTransfer.files);
     }

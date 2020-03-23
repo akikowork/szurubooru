@@ -22,12 +22,12 @@ class TagListController {
     constructor(ctx) {
         if (!api.hasPrivilege('tags:list')) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to view tags.');
+            this._view.showError('您没有浏览Tags的权限.');
             return;
         }
 
         topNavigation.activate('tags');
-        topNavigation.setTitle('Listing tags');
+        topNavigation.setTitle('Tags列表');
 
         this._ctx = ctx;
         this._pageController = new PageController();

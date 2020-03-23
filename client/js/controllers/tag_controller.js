@@ -14,7 +14,7 @@ class TagController {
     constructor(ctx, section) {
         if (!api.hasPrivilege('tags:view')) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to view tags.');
+            this._view.showError('您没有浏览Tags的权限.');
             return;
         }
 
@@ -86,7 +86,7 @@ class TagController {
             e.detail.tag.description = e.detail.description;
         }
         e.detail.tag.save().then(() => {
-            this._view.showSuccess('Tag saved.');
+            this._view.showSuccess('Tag已保存.');
             this._view.enableForm();
         }, error => {
             this._view.showError(error.message);
@@ -100,7 +100,7 @@ class TagController {
         e.detail.tag
             .merge(e.detail.targetTagName, e.detail.addAlias)
             .then(() => {
-                this._view.showSuccess('Tag merged.');
+                this._view.showSuccess('Tag已合并.');
                 this._view.enableForm();
                 router.replace(
                     uri.formatClientLink(
@@ -118,7 +118,7 @@ class TagController {
         e.detail.tag.delete()
             .then(() => {
                 const ctx = router.show(uri.formatClientLink('tags'));
-                ctx.controller.showSuccess('Tag deleted.');
+                ctx.controller.showSuccess('Tag已删除.');
             }, error => {
                 this._view.showError(error.message);
                 this._view.enableForm();

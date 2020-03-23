@@ -19,12 +19,12 @@ class PostListController {
     constructor(ctx) {
         if (!api.hasPrivilege('posts:list')) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to view posts.');
+            this._view.showError('您没有查看图片列表的权限.');
             return;
         }
 
         topNavigation.activate('posts');
-        topNavigation.setTitle('Listing posts');
+        topNavigation.setTitle('图片列表');
 
         this._ctx = ctx;
         this._pageController = new PageController();

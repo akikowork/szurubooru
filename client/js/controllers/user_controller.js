@@ -17,7 +17,7 @@ class UserController {
         if (!api.hasPrivilege('users:view') &&
                 !api.isLoggedIn({name: userName})) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to view users.');
+            this._view.showError('您没有浏览此用户的权限.');
             return;
         }
 
@@ -37,7 +37,7 @@ class UserController {
                 });
         }
 
-        topNavigation.setTitle('User ' + userName);
+        topNavigation.setTitle('用户 ' + userName);
         Promise.all([
             userTokenPromise,
             User.get(userName)
@@ -172,7 +172,7 @@ class UserController {
                     false) :
                 Promise.resolve();
         }).then(() => {
-            this._view.showSuccess('Settings updated.');
+            this._view.showSuccess('设置已更新.');
             this._view.enableForm();
         }, error => {
             this._view.showError(error.message);
@@ -192,10 +192,10 @@ class UserController {
                 }
                 if (api.hasPrivilege('users:list')) {
                     const ctx = router.show(uri.formatClientLink('users'));
-                    ctx.controller.showSuccess('Account deleted.');
+                    ctx.controller.showSuccess('账号已删除.');
                 } else {
                     const ctx = router.show(uri.formatClientLink());
-                    ctx.controller.showSuccess('Account deleted.');
+                    ctx.controller.showSuccess('账号已删除.');
                 }
             }, error => {
                 this._view.showError(error.message);
@@ -209,7 +209,7 @@ class UserController {
         UserToken.create(e.detail.user.name, e.detail.note, e.detail.expirationTime)
             .then(response => {
                 const ctx = router.show(uri.formatClientLink('user', e.detail.user.name, 'list-tokens'));
-                ctx.controller.showSuccess('Token ' + response.token + ' created.');
+                ctx.controller.showSuccess('令牌 ' + response.token + ' 已创建.');
             }, error => {
                 this._view.showError(error.message);
                 this._view.enableForm();
@@ -225,7 +225,7 @@ class UserController {
             e.detail.userToken.delete(e.detail.user.name)
                 .then(() => {
                     const ctx = router.show(uri.formatClientLink('user', e.detail.user.name, 'list-tokens'));
-                    ctx.controller.showSuccess('Token ' + e.detail.userToken.token + ' deleted.');
+                    ctx.controller.showSuccess('令牌 ' + e.detail.userToken.token + ' 已删除.');
                 }, error => {
                     this._view.showError(error.message);
                     this._view.enableForm();
@@ -243,7 +243,7 @@ class UserController {
 
         e.detail.userToken.save(e.detail.user.name).then(response => {
             const ctx = router.show(uri.formatClientLink('user', e.detail.user.name, 'list-tokens'));
-            ctx.controller.showSuccess('Token ' + response.token + ' updated.');
+            ctx.controller.showSuccess('令牌 ' + response.token + ' 已更新.');
         }, error => {
             this._view.showError(error.message);
             this._view.enableForm();

@@ -186,7 +186,7 @@ class CommentControl extends events.EventTarget {
 
     _evtDeleteClick(e) {
         e.preventDefault();
-        if (!window.confirm('Are you sure you want to delete this comment?')) {
+        if (!window.confirm('您确定要删除这条评论?')) {
             return;
         }
         this.dispatchEvent(new CustomEvent('delete', {

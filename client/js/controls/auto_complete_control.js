@@ -101,11 +101,11 @@ class AutoCompleteControl {
 
     _install() {
         if (!this._sourceInputNode) {
-            throw new Error('Input element was not found');
+            throw new Error('没有找到输入元素');
         }
         if (this._sourceInputNode.getAttribute('data-autocomplete')) {
             throw new Error(
-                'Autocompletion was already added for this element');
+                '该元素已经添加了自动完成功能');
         }
         this._sourceInputNode.setAttribute('data-autocomplete', true);
         this._sourceInputNode.setAttribute('autocomplete', 'off');

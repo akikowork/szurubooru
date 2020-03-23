@@ -15,12 +15,12 @@ class CommentsController {
         if (!api.hasPrivilege('comments:list')) {
             this._view = new EmptyView();
             this._view.showError(
-                'You don\'t have privileges to view comments.');
+                '您没有查看评论的权限.');
             return;
         }
 
         topNavigation.activate('comments');
-        topNavigation.setTitle('Listing comments');
+        topNavigation.setTitle('评论列表');
 
         this._pageController = new PageController();
         this._pageController.run({

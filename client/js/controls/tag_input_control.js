@@ -215,7 +215,7 @@ class TagInputControl extends events.EventTarget {
             (e.originalEvent || e).clipboardData.getData('text/plain');
 
         if (pastedText.length > 2000) {
-            window.alert('Pasted text is too long.');
+            window.alert('键入的字符串过长.');
             return;
         }
         this._hideAutoComplete();

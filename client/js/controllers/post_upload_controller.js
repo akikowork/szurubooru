@@ -21,12 +21,12 @@ class PostUploadController {
 
         if (!api.hasPrivilege('posts:create')) {
             this._view = new EmptyView();
-            this._view.showError('You don\'t have privileges to upload posts.');
+            this._view.showError('您没有上传图片的权限.');
             return;
         }
 
         topNavigation.activate('upload');
-        topNavigation.setTitle('Upload');
+        topNavigation.setTitle('上传');
         this._view = new PostUploadView({
             canUploadAnonymously: api.hasPrivilege('posts:create:anonymous'),
             canViewPosts: api.hasPrivilege('posts:view'),
@@ -65,7 +65,7 @@ class PostUploadController {
                     this._view.clearMessages();
                     misc.disableExitConfirmation();
                     const ctx = router.show(uri.formatClientLink('posts'));
-                    ctx.controller.showSuccess('Posts uploaded.');
+                    ctx.controller.showSuccess('图片已上传.');
                 }, error => {
                     if (error.uploadable) {
                         if (error.similarPosts) {
@@ -103,7 +103,7 @@ class PostUploadController {
                         this._view.removeUploadable(uploadable);
                         return Promise.resolve();
                     } else {
-                        let error = new Error('Post already uploaded ' +
+                        let error = new Error('图片已经被上传过了 ' +
                             `(@${searchResult.exactPost.id})`);
                         error.uploadable = uploadable;
                         return Promise.reject(error);
@@ -113,8 +113,8 @@ class PostUploadController {
                 // notify about similar posts
                 if (searchResult.similarPosts.length) {
                     let error = new Error(
-                        `Found ${searchResult.similarPosts.length} similar ` +
-                        'posts.\nYou can resume or discard this upload.');
+                        `发现相似图片 ${searchResult.similarPosts.length} 张` +
+                        '\n您可以继续或放弃此上传.');
                     error.uploadable = uploadable;
                     error.similarPosts = searchResult.similarPosts;
                     return Promise.reject(error);
