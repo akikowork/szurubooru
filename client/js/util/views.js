@@ -279,13 +279,13 @@ function replaceContent(target, source) {
     } else if (source instanceof Node) {
         target.appendChild(source);
     } else if (source !== null) {
-        throw `Invalid view source: ${source}`;
+        throw `无效的源: ${source}`;
     }
 }
 
 function showMessage(target, message, className) {
     if (!message) {
-        message = 'Unknown message';
+        message = '未知信息';
     }
     const messagesHolderNode = target.querySelector('.messages');
     if (!messagesHolderNode) {
@@ -373,7 +373,7 @@ function htmlToDom(html) {
 
 function getTemplate(templatePath) {
     if (!(templatePath in templates)) {
-        throw `Missing template: ${templatePath}`;
+        throw `缺失模板: ${templatePath}`;
     }
     const templateFactory = templates[templatePath];
     return ctx => {

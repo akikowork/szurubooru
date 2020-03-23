@@ -76,17 +76,17 @@ class TopNavigation extends events.EventTarget {
 
 function _makeTopNavigation() {
     const ret = new TopNavigation();
-    ret.add('home', new TopNavigationItem('H', 'Home', ''));
-    ret.add('posts', new TopNavigationItem('P', 'Posts', 'posts'));
-    ret.add('upload', new TopNavigationItem('U', 'Upload', 'upload'));
-    ret.add('comments', new TopNavigationItem('C', 'Comments', 'comments'));
+    ret.add('home', new TopNavigationItem('H', '主页', ''));
+    ret.add('posts', new TopNavigationItem('P', '图片', 'posts'));
+    ret.add('upload', new TopNavigationItem('U', '上传', 'upload'));
+    ret.add('comments', new TopNavigationItem('C', '评论', 'comments'));
     ret.add('tags', new TopNavigationItem('T', 'Tags', 'tags'));
-    ret.add('users', new TopNavigationItem('S', 'Users', 'users'));
-    ret.add('account', new TopNavigationItem('A', 'Account', 'user/{me}'));
-    ret.add('register', new TopNavigationItem('R', 'Register', 'register'));
-    ret.add('login', new TopNavigationItem('L', 'Log in', 'login'));
-    ret.add('logout', new TopNavigationItem('O', 'Logout', 'logout'));
-    ret.add('help', new TopNavigationItem('E', 'Help', 'help'));
+    ret.add('users', new TopNavigationItem('S', '用户', 'users'));
+    ret.add('account', new TopNavigationItem('A', '我的账户', 'user/{me}'));
+    ret.add('register', new TopNavigationItem('R', '注册', 'register'));
+    ret.add('login', new TopNavigationItem('L', '登录', 'login'));
+    ret.add('logout', new TopNavigationItem('O', '登出', 'logout'));
+    ret.add('help', new TopNavigationItem('E', '帮助', 'help'));
     ret.add(
         'settings',
         new TopNavigationItem(

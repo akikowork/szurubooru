@@ -63,17 +63,17 @@ function formatRelativeTime(timeString) {
     const future = now < then;
 
     const descriptions = [
-        [60,                            'a few seconds', null],
-        [60 * 2,                        'a minute',      null],
-        [60 * 60,                       '% minutes',     60],
-        [60 * 60 * 2,                   'an hour',       null],
-        [60 * 60 * 24,                  '% hours',       60 * 60],
-        [60 * 60 * 24 * 2,              'a day',         null],
-        [60 * 60 * 24 * 30.42,          '% days',        60 * 60 * 24],
-        [60 * 60 * 24 * 30.42 * 2,      'a month',       null],
-        [60 * 60 * 24 * 30.42 * 12,     '% months',      60 * 60 * 24 * 30.42],
-        [60 * 60 * 24 * 30.42 * 12 * 2, 'a year',        null],
-        [8640000000000000 /*max*/, '% years', 60 * 60 * 24 * 30.42 * 12],
+        [60,                            '几秒', null],
+        [60 * 2,                        '一分钟',      null],
+        [60 * 60,                       '% 分钟',     60],
+        [60 * 60 * 2,                   '一小时',       null],
+        [60 * 60 * 24,                  '% 小时',       60 * 60],
+        [60 * 60 * 24 * 2,              '一天',         null],
+        [60 * 60 * 24 * 30.42,          '% 天',        60 * 60 * 24],
+        [60 * 60 * 24 * 30.42 * 2,      '一月',       null],
+        [60 * 60 * 24 * 30.42 * 12,     '% 月',      60 * 60 * 24 * 30.42],
+        [60 * 60 * 24 * 30.42 * 12 * 2, '一年',        null],
+        [8640000000000000 /*max*/, '% 年', 60 * 60 * 24 * 30.42 * 12],
     ];
 
     let text = null;
@@ -87,10 +87,10 @@ function formatRelativeTime(timeString) {
         }
     }
 
-    if (text === 'a day') {
-        return future ? 'tomorrow' : 'yesterday';
+    if (text === '一天') {
+        return future ? '明天' : '昨天';
     }
-    return future ? 'in ' + text : text + ' ago';
+    return future ? '在 ' + text : text + ' 前';
 }
 
 function formatMarkdown(text) {
@@ -130,8 +130,8 @@ function unindent(callSite, ...args) {
 
 function enableExitConfirmation() {
     window.onbeforeunload = e => {
-        return 'Are you sure you want to leave? ' +
-            'Data you have entered may not be saved.';
+        return '您确定要离开吗? ' +
+            '您输入的数据还未保存.';
     };
 }
 

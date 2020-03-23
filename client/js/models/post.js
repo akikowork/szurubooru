@@ -83,6 +83,7 @@ class Post extends events.EventTarget {
                 return Promise.resolve(response);
             });
         returnedPromise.abort = () => apiPromise.abort();
+		
         return returnedPromise;
     }
 
