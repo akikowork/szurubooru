@@ -9,6 +9,11 @@
                 <%= ctx.makeCheckbox({
                     text: '跳过重复项',
                     name: 'skip-duplicates',
+                    checked: true,
+                }) %>
+				<%= ctx.makeCheckbox({
+                    text: '跳过相似项 !慎用!',
+                    name: 'skip-similar',
                     checked: false,
                 }) %>
             </span>
