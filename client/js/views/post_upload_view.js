@@ -159,7 +159,7 @@ class PostUploadView extends events.EventTarget {
             this._contentInputNode,
             {
                 extraText:
-                    'Allowed extensions: .jpg, .png, .gif, .webm, .mp4, .swf',
+                    '允许上传的类型: .jpg, .png, .gif, .webm, .mp4, .swf',
                 allowUrls: true,
                 allowMultiple: true,
                 lock: false,
@@ -225,12 +225,12 @@ class PostUploadView extends events.EventTarget {
         if (duplicatesFound) {
             let message = null;
             if (duplicatesFound < uploadables.length) {
-                message = 'Some of the files were already added ' +
-                    'and have been skipped.';
+                message = '一些文件已被添加到队列了,' +
+                    '自动跳过.';
             } else if (duplicatesFound === 1) {
-                message = 'This file was already added.';
+                message = '这个文件已经被添加到队列了.';
             } else {
-                message = 'These files were already added.';
+                message = '这些文件已经被添加到队列了.';
             }
             alert(message);
         }
@@ -246,7 +246,7 @@ class PostUploadView extends events.EventTarget {
         this._emit('change');
         if (!this._uploadables.length) {
             this._formNode.classList.add('inactive');
-            this._submitButtonNode.value = 'Upload all';
+            this._submitButtonNode.value = '全部上传';
         }
     }
 
@@ -273,7 +273,7 @@ class PostUploadView extends events.EventTarget {
         for (let uploadable of this._uploadables) {
             this._updateUploadableFromDom(uploadable);
         }
-        this._submitButtonNode.value = 'Resume upload';
+        this._submitButtonNode.value = '继续上传';
         this._emit('submit');
     }
 
@@ -345,6 +345,7 @@ class PostUploadView extends events.EventTarget {
                 {detail: {
                     uploadables: this._uploadables,
                     skipDuplicates: this._skipDuplicatesCheckboxNode.checked,
+					skipSimilar: this._skipSimilarCheckboxNode.checked,
                 }}));
     }
 
@@ -390,6 +391,9 @@ class PostUploadView extends events.EventTarget {
 
     get _skipDuplicatesCheckboxNode() {
         return this._hostNode.querySelector('form [name=skip-duplicates]');
+    }
+	get _skipSimilarCheckboxNode() {
+        return this._hostNode.querySelector('form [name=skip-similar]');
     }
 
     get _submitButtonNode() {
