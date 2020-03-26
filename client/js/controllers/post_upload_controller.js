@@ -59,7 +59,7 @@ class PostUploadController {
         e.detail.uploadables.reduce(
             (promise, uploadable) =>
                 promise.then(() => this._uploadSinglePost(
-                    uploadable, e.detail.skipDuplicates)),
+                    uploadable, e.detail.skipDuplicates, e.detail.skipSimilar)),
             Promise.resolve())
                 .then(() => {
                     this._view.clearMessages();
@@ -86,7 +86,7 @@ class PostUploadController {
                 });
     }
 
-    _uploadSinglePost(uploadable, skipDuplicates) {
+    _uploadSinglePost(uploadable, skipDuplicates, skipSimilar) {
         progress.start();
         let reverseSearchPromise = Promise.resolve();
         if (!uploadable.lookalikesConfirmed) {
