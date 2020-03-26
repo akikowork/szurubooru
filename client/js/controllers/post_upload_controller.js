@@ -12,8 +12,8 @@ const PostUploadView = require('../views/post_upload_view.js');
 const EmptyView = require('../views/empty_view.js');
 
 const genericErrorMessage =
-    'One of the posts needs your attention; ' +
-    'click "resume upload" when you\'re ready.';
+    '有一张需要注意的图片; ' +
+    '当您准备好后，点击 "继续上传".';
 
 class PostUploadController {
     constructor() {
@@ -112,12 +112,18 @@ class PostUploadController {
 
                 // notify about similar posts
                 if (searchResult.similarPosts.length) {
+					/*Auto resolve*/
+					if (skipSimilar) {
+                        this._view.removeUploadable(uploadable);
+                        return Promise.resolve();
+                    } else {
                     let error = new Error(
                         `发现相似图片 ${searchResult.similarPosts.length} 张` +
                         '\n您可以继续或放弃此上传.');
                     error.uploadable = uploadable;
                     error.similarPosts = searchResult.similarPosts;
                     return Promise.reject(error);
+					}
                 }
             }
 
